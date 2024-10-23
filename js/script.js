@@ -1,1 +1,3 @@
 // Ini Javascript
+
+prompt()
