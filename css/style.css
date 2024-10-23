@@ -30,7 +30,18 @@ nav>a {
   height: 250px;
   background-size: cover;
   background-position: center;
+}
+
+.photo-1 {
   background-image: url(https://picsum.photos/1000);
+}
+
+.photo-2 {
+  background-image: url(../assets/fals.jpg);
+}
+
+.photo-3 {
+  background-image: url(https://picsum.photos/750);
 }
 
 .article {
@@ -39,10 +50,22 @@ nav>a {
 
 .message-container {
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#result {
+  margin: 0px;
 }
 
 footer>div {
   text-align: center;
   font-size: small;
   font-family: tahoma;
+}
+
+@media only screen and (max-width: 480px) {
+  .main-header {
+    flex-direction: column;
+  }
 }
