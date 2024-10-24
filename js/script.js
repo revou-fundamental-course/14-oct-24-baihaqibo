@@ -1,15 +1,26 @@
 // Ini Javascript
 
-function validateForm() {
-  let inputUsername = document.getElementById('input-username').value;
-  if (inputUsername == '') {
-    document.getElementById('input-username').style.border = "1px solid red";
-  } else {
-    document.getElementById('result').innerHTML = inputUsername;
-    document.getElementById('input-username').style.border = "1px solid";
-    console.log(inputUsername);
+function submitForm() {
+  const name = document.getElementById('name').value.trim();
+  const dob = document.getElementById('dob').value;
+  const gender = document.getElementById('gender').value;
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !dob || !gender || !message) {
+      alert('Harap lengkapi semua field!');
+      return;
   }
 
+  const outputDiv = document.getElementById('output');
+  outputDiv.innerHTML = `
+      <p><strong>Nama:</strong> ${name}</p>
+      <p><strong>Tanggal Lahir:</strong> ${dob}</p>
+      <p><strong>Jenis Kelamin:</strong> ${gender}</p>
+      <p><strong>Pesan:</strong> ${message}</p>
+  `;
+
+  // Kosongkan form setelah mengirim
+  document.getElementById('inputForm').reset();
 }
 
 let indexSlide = 0;
