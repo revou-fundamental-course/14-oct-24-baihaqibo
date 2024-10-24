@@ -2,51 +2,69 @@
 .main-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
 }
 
-/* https://picsum.photos/100 */
 .logo-icon {
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 150px;
   background-size: cover;
   background-position: center;
-  border-radius: 50%;
-  background-image: url(../assets/fals.jpg);
+  background-image: url(../assets/logo-sinergi.png);
 }
 
 nav {
   display: flex;
+  margin: 10px 0;
 }
 
 nav>a {
-  border: 1px solid;
-  padding: 8px;
+  padding: 10px;
   text-decoration: none;
-  color: black;
+  color: deepskyblue;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: tahoma;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .photo-banner {
-  height: 250px;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .photo-1 {
-  background-image: url(https://picsum.photos/1000);
+  width: 100%;
+  object-fit: cover;
 }
 
 .photo-2 {
-  background-image: url(../assets/fals.jpg);
+  width: 100%;
+  object-fit: cover;
 }
 
 .photo-3 {
-  background-image: url(https://picsum.photos/750);
+  width: 100%;
+  object-fit: cover;
 }
 
 .article {
   height: 300px;
 }
+
+.profile-photo {
+  width: 60%;
+  height: 100%
+}
+
+.product-photo {
+  height: 50%
+}
+
 
 .message-container {
   display: flex;
@@ -65,7 +83,7 @@ footer>div {
 }
 
 @media only screen and (max-width: 480px) {
-  .main-header {
+  .main-header, nav {
     flex-direction: column;
   }
 }
